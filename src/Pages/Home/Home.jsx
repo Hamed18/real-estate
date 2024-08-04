@@ -1,3 +1,4 @@
+import Footer from "../../Shared/Footer";
 import Header from "../../Shared/Header";
 import Navbar from "../../Shared/Navbar";
 
@@ -6,7 +7,8 @@ const Home = () => {
 		<div className="text-center">
 			<Navbar></Navbar>
 			<Header></Header>
-			<p className="text-center font-Poppins">This is Home Page</p>
+			<p className="text-center font-Poppins">This is Main Section</p>
+			<Footer></Footer>
 		</div>
 	);
 };
