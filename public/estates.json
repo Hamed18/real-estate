@@ -16,14 +16,14 @@
             "garden",
             "basement"
         ],
-        "view_property": "View Property"
+        "view_property": "Comfortable home with a garage, garden, and basement"
     },
     {
         "id": 2,
         "estate_title": "Townhouse",
         "segment_name": "City Living",
         "description": "A modern townhouse located in a vibrant city area, offering convenience and style.",
-        "image": "https://images.unsplash.com/photo-1595521950184-5e30320d5ea1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image": "https://i.ibb.co/VYHyzhZ/townhouse.jpg",
         "price": "$700,000",
         "status": "sale",
         "area": "1600 sq ft",
@@ -35,14 +35,14 @@
             "garage",
             "rooftop terrace"
         ],
-        "view_property": "View Property"
+        "view_property": "Modern townhouse with a balcony, garage, and rooftop terrace"
     },
     {
         "id": 3,
         "estate_title": "Apartment",
         "segment_name": "Urban Living",
         "description": "A contemporary apartment with stunning views and modern amenities.",
-        "image": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image": "https://i.ibb.co/tJ6rhvm/apartments.jpg",
         "price": "$800,000",
         "status": "sale",
         "area": "1500 sq ft",
@@ -54,14 +54,14 @@
             "balcony",
             "parking"
         ],
-        "view_property": "View Property"
+        "view_property": "Contemporary apartment with stunning views, gym, and balcony"
     },
     {
         "id": 4,
         "estate_title": "Student Housing",
         "segment_name": "Campus Living",
         "description": "Affordable student housing close to campus, perfect for college students.",
-        "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image": "https://i.ibb.co/p1hNsnS/student.jpg",
         "price": "$300,000",
         "status": "sale",
         "area": "1000 sq ft",
@@ -73,14 +73,14 @@
             "laundry",
             "parking"
         ],
-        "view_property": "View Property"
+        "view_property": "Affordable housing with a study room and laundry facilities"
     },
     {
         "id": 5,
         "estate_title": "Senior Living Community",
         "segment_name": "Golden Years",
         "description": "A welcoming senior living community offering comfort and care for retirees.",
-        "image": "https://images.unsplash.com/photo-1600585154340-be6161b85f3b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image": "https://i.ibb.co/WGHSqxP/senior.jpg",
         "price": "$400,000",
         "status": "sale",
         "area": "1200 sq ft",
@@ -92,14 +92,14 @@
             "garden",
             "recreation room"
         ],
-        "view_property": "View Property"
+        "view_property": "Senior community with healthcare and recreation room"
     },
     {
         "id": 6,
         "estate_title": "Vacation Rental",
         "segment_name": "Holiday Haven",
         "description": "A cozy vacation rental perfect for a getaway, with scenic views and modern amenities.",
-        "image": "https://images.unsplash.com/photo-1542089363-2b2b06a6b6ef?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image": "https://i.ibb.co/6Z8pp9v/vacation.jpg",
         "price": "$450,000",
         "status": "sale",
         "area": "1300 sq ft",
@@ -111,14 +111,14 @@
             "balcony",
             "private beach"
         ],
-        "view_property": "View Property"
+        "view_property": "Vacation rental with swimming pool and private beach"
     },
     {
         "id": 7,
         "estate_title": "Townhouse",
         "segment_name": "City Living",
         "description": "A modern townhouse located in a vibrant city area, offering convenience and style.",
-        "image": "https://images.unsplash.com/photo-1595521950184-5e30320d5ea1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image": "https://i.ibb.co/QH0yGgR/townhouse2.jpg",
         "price": "$700,000",
         "status": "sale",
         "area": "1600 sq ft",
@@ -130,14 +130,14 @@
             "garage",
             "rooftop terrace"
         ],
-        "view_property": "View Property"
+        "view_property": "Modern townhouse with a balcony, garage, and rooftop terrace"
     },
     {
         "id": 8,
         "estate_title": "Luxury Apartment",
         "segment_name": "Redfin Rank the Most Competitive",
         "description": "A high-end luxury apartment with stunning city views and top-notch amenities. A luxury apartment is a type of apartment that is intended to provide its occupant with higher-than-average levels of comfort, quality and convenience.",
-        "image": "https://images.unsplash.com/photo-1632743441209-8a09b8a37e25?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image": "https://i.ibb.co/tJ6rhvm/apartments.jpg",
         "price": "$1,200,000",
         "status": "sale",
         "area": "1800 sq ft",
@@ -149,14 +149,14 @@
             "gym",
             "rooftop terrace"
         ],
-        "view_property": "View Property"
+        "view_property": "Luxury apartment with city views, swimming pool, and gym"
     },
     {
         "id": 9,
         "estate_title": "Senior Living Community",
         "segment_name": "Golden Years",
         "description": "A welcoming senior living community offering comfort and care for retirees.",
-        "image": "https://images.unsplash.com/photo-1600585154340-be6161b85f3b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image": "https://i.ibb.co/sK0gVtd/senior2.jpg",
         "price": "$400,000",
         "status": "sale",
         "area": "1200 sq ft",
@@ -168,6 +168,6 @@
             "garden",
             "recreation room"
         ],
-        "view_property": "View Property"
+        "view_property": "Senior community with healthcare and recreation room"
     }
 ]
