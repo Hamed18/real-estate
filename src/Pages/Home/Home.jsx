@@ -3,6 +3,8 @@ import Footer from "../../Shared/Footer";
 import Header from "../../Shared/Header";
 import Navbar from "../../Shared/Navbar";
 import EstateCard from "../Home/EstateCard";
+import LeftSideNavbar from "../../Shared/LeftSideNavbar";
+import RightSideNavbar from "../../Shared/RightSideNavbar";
 
 const Home = () => {
 	const estates = useLoaderData();
@@ -17,7 +19,7 @@ const Home = () => {
 			{/* main section */}
 			<div className="grid grid-cols-1 md:grid-cols-4 gap-6">
 				<div>
-					<p>left side bar</p>
+					<LeftSideNavbar></LeftSideNavbar>
 				</div>
 
 				{/* news container */}
@@ -36,7 +38,7 @@ const Home = () => {
 				</div>
 
 				<div>
-					<p>Right Side bar</p>
+					<RightSideNavbar></RightSideNavbar>
 				</div>
 			</div>
 
