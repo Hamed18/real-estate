@@ -1,0 +1,173 @@
+[
+    {
+        "id": 1,
+        "estate_title": "Single-family Home",
+        "segment_name": "Family Living",
+        "description": "A comfortable single-family home in a friendly neighborhood, ideal for families.",
+        "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "price": "$600,000",
+        "status": "sale",
+        "area": "2000 sq ft",
+        "location": "123 Birch Street, Suburbia",
+        "facilities": [
+            "living room",
+            "kitchen",
+            "garage",
+            "garden",
+            "basement"
+        ],
+        "view_property": "View Property"
+    },
+    {
+        "id": 2,
+        "estate_title": "Townhouse",
+        "segment_name": "City Living",
+        "description": "A modern townhouse located in a vibrant city area, offering convenience and style.",
+        "image": "https://images.unsplash.com/photo-1595521950184-5e30320d5ea1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "price": "$700,000",
+        "status": "sale",
+        "area": "1600 sq ft",
+        "location": "456 City Street, Downtown",
+        "facilities": [
+            "living room",
+            "kitchen",
+            "balcony",
+            "garage",
+            "rooftop terrace"
+        ],
+        "view_property": "View Property"
+    },
+    {
+        "id": 3,
+        "estate_title": "Apartment",
+        "segment_name": "Urban Living",
+        "description": "A contemporary apartment with stunning views and modern amenities.",
+        "image": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "price": "$800,000",
+        "status": "sale",
+        "area": "1500 sq ft",
+        "location": "789 Urban Avenue, Metropolis",
+        "facilities": [
+            "living room",
+            "kitchen",
+            "gym",
+            "balcony",
+            "parking"
+        ],
+        "view_property": "View Property"
+    },
+    {
+        "id": 4,
+        "estate_title": "Student Housing",
+        "segment_name": "Campus Living",
+        "description": "Affordable student housing close to campus, perfect for college students.",
+        "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "price": "$300,000",
+        "status": "sale",
+        "area": "1000 sq ft",
+        "location": "123 University Drive, Collegiate",
+        "facilities": [
+            "living room",
+            "kitchen",
+            "study room",
+            "laundry",
+            "parking"
+        ],
+        "view_property": "View Property"
+    },
+    {
+        "id": 5,
+        "estate_title": "Senior Living Community",
+        "segment_name": "Golden Years",
+        "description": "A welcoming senior living community offering comfort and care for retirees.",
+        "image": "https://images.unsplash.com/photo-1600585154340-be6161b85f3b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "price": "$400,000",
+        "status": "sale",
+        "area": "1200 sq ft",
+        "location": "456 Golden Road, Serenity",
+        "facilities": [
+            "living room",
+            "kitchen",
+            "healthcare center",
+            "garden",
+            "recreation room"
+        ],
+        "view_property": "View Property"
+    },
+    {
+        "id": 6,
+        "estate_title": "Vacation Rental",
+        "segment_name": "Holiday Haven",
+        "description": "A cozy vacation rental perfect for a getaway, with scenic views and modern amenities.",
+        "image": "https://images.unsplash.com/photo-1542089363-2b2b06a6b6ef?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "price": "$450,000",
+        "status": "sale",
+        "area": "1300 sq ft",
+        "location": "123 Holiday Lane, Seaside",
+        "facilities": [
+            "living room",
+            "kitchen",
+            "swimming pool",
+            "balcony",
+            "private beach"
+        ],
+        "view_property": "View Property"
+    },
+    {
+        "id": 7,
+        "estate_title": "Townhouse",
+        "segment_name": "City Living",
+        "description": "A modern townhouse located in a vibrant city area, offering convenience and style.",
+        "image": "https://images.unsplash.com/photo-1595521950184-5e30320d5ea1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "price": "$700,000",
+        "status": "sale",
+        "area": "1600 sq ft",
+        "location": "456 City Street, Downtown",
+        "facilities": [
+            "living room",
+            "kitchen",
+            "balcony",
+            "garage",
+            "rooftop terrace"
+        ],
+        "view_property": "View Property"
+    },
+    {
+        "id": 8,
+        "estate_title": "Luxury Apartment",
+        "segment_name": "Redfin Rank the Most Competitive",
+        "description": "A high-end luxury apartment with stunning city views and top-notch amenities. A luxury apartment is a type of apartment that is intended to provide its occupant with higher-than-average levels of comfort, quality and convenience.",
+        "image": "https://images.unsplash.com/photo-1632743441209-8a09b8a37e25?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "price": "$1,200,000",
+        "status": "sale",
+        "area": "1800 sq ft",
+        "location": "456 Elm Street, Metropolis",
+        "facilities": [
+            "living room",
+            "swimming pool",
+            "kitchen",
+            "gym",
+            "rooftop terrace"
+        ],
+        "view_property": "View Property"
+    },
+    {
+        "id": 9,
+        "estate_title": "Senior Living Community",
+        "segment_name": "Golden Years",
+        "description": "A welcoming senior living community offering comfort and care for retirees.",
+        "image": "https://images.unsplash.com/photo-1600585154340-be6161b85f3b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "price": "$400,000",
+        "status": "sale",
+        "area": "1200 sq ft",
+        "location": "456 Golden Road, Serenity",
+        "facilities": [
+            "living room",
+            "kitchen",
+            "healthcare center",
+            "garden",
+            "recreation room"
+        ],
+        "view_property": "View Property"
+    }
+]
