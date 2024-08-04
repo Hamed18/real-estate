@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const estateCard = ({ estates }) => {
   const { id,estate_title,segment_name,description,image,price,status,area,location,facilities,view_property } = estates;
   return (
@@ -26,12 +28,9 @@ const estateCard = ({ estates }) => {
             <li key={index}>{facility}</li>
           ))}
         </ul>
-        <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          onClick={() => (window.location.href = view_property)}
-        >
-          View Property
-        </button>
+		<button>
+          <Link to={`/estates/${id}`} className="text-blue-600 font-bold">View Property</Link>
+		</button>
       </div>
     </div>
   );
