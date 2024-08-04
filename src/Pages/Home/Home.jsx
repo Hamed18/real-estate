@@ -4,8 +4,8 @@ import Navbar from "../../Shared/Navbar";
 const Home = () => {
 	return (
 		<div className="text-center">
-			<Header></Header>
 			<Navbar></Navbar>
+			<Header></Header>
 			<p className="text-center font-Poppins">This is Home Page</p>
 		</div>
 	);
