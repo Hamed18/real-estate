@@ -3,6 +3,7 @@ import Home from "../Pages/Home/Home";
 import Root from "../Layout/Root";
 import EstateDetails from "../Pages/EstateDetails";
 import Login from "../Pages/UserProfile/Login";
+import Register from "../Pages/UserProfile/Register";
 
 const routes = createBrowserRouter([
 	{
@@ -21,7 +22,11 @@ const routes = createBrowserRouter([
 		{
 			path: '/login',
 			element: <Login></Login>
-		}
+		},
+		{
+			path: '/register',
+			element: <Register></Register>
+		},
 	  ]
 	},
   ]);
