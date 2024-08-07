@@ -2,9 +2,10 @@ import Navbar from "../../Shared/Navbar";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 const Register = () => {
-  const {createUser} = useContext(AuthContext);
+  const {createUser,signIn} = useContext(AuthContext);
 
   const handleRegister = (e) => {
     e.preventDefault();

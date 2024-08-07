@@ -1,13 +1,29 @@
+import { AuthContext } from "../../Providers/AuthProviders";
 import Navbar from "../../Shared/Navbar";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
 
 const Login = () => {
+  const { signIn } = useContext(AuthContext);
+
   const handleLogin = (e) => {
     e.preventDefault();
     console.log(e.currentTarget); // will render whole form's html structure
     const form = new FormData(e.currentTarget); // will render form data
     console.log(form);
     console.log(form.get("password")); // will render the password user have set
+
+    const email = form.get("email");
+    const password = form.get("password");
+    console.log(email, password); // test
+
+    signIn(email, password) // calling signIn function from Authprovider.jsx
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   return (
@@ -49,9 +65,12 @@ const Login = () => {
             <button className="btn btn-primary">Login</button>
           </div>
         </form>
-		<p className="text-center mt-4">Do not have an account?
-		      <Link className="text-blue-600 font-bold" to="/register">Register</Link>
-		  </p>
+        <p className="text-center mt-4">
+          Do not have an account?
+          <Link className="text-blue-600 font-bold" to="/register">
+            Register
+          </Link>
+        </p>
       </div>
     </div>
   );
