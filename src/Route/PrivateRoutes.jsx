@@ -3,7 +3,13 @@ import { AuthContext } from "../Providers/AuthProviders";
 import { Navigate } from "react-router-dom";
 
 const PrivateRoute = ({children}) => {
-	const {user} = useContext(AuthContext);
+	const {user,loading} = useContext(AuthContext);
+
+	if (loading){
+		// console.log("loading happens");
+		return <span className="bg-green-700"></span>
+	}
+
 	if (user){
 		return children;
 	}
