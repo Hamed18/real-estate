@@ -4,6 +4,7 @@ import Root from "../Layout/Root";
 import EstateDetails from "../Pages/EstateDetails";
 import Login from "../Pages/UserProfile/Login";
 import Register from "../Pages/UserProfile/Register";
+import PrivateRoute from "./PrivateRoutes";
 
 const routes = createBrowserRouter([
 	{
@@ -17,7 +18,7 @@ const routes = createBrowserRouter([
 		},
 		{
 			path: "/estates/:id",  // dynamic route
-			element: <EstateDetails></EstateDetails>,
+			element: <PrivateRoute><EstateDetails></EstateDetails></PrivateRoute>,
 			loader: () => fetch('estates.json')
 		},
 		{
