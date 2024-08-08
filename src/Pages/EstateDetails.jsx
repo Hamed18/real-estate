@@ -13,8 +13,8 @@ const EstateDetails = () => {
 
 	return (
 		<div>
-			<Header></Header>
 			<Navbar></Navbar>
+			<Header></Header>
 			<p>estate details</p>
 			<h3 className="text-center">{estate_title}</h3>
 			<h3 className="text-center">{location}</h3>
