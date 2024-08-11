@@ -2,6 +2,8 @@ import { AuthContext } from "../../Providers/AuthProviders";
 import Navbar from "../../Shared/Navbar";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import app from "../../firebase/firebase.config";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
@@ -30,6 +32,21 @@ const Login = () => {
       });
 
   };
+
+  // Google Sign In
+  const auth = getAuth(app);
+  const GoogleProvider = new GoogleAuthProvider();
+  const handleGoogleSignIn = () => {
+    console.log('google mama is coming');
+    signInWithPopup(auth,GoogleProvider)
+    .then(result => {
+      const user = result.user;
+      console.log(user);
+    })
+    .catch(error => {
+      console.log('error',error.message);
+    })
+  }
 
   return (
     <div>
@@ -68,6 +85,10 @@ const Login = () => {
           </div>
           <div className="form-control mt-6">
             <button className="btn btn-primary">Login</button>
+          </div>
+          {/* google sign in */}
+          <div>  
+            <button className="btn btn-secondary m-2 item-center" onClick={handleGoogleSignIn}>Google Sign In</button>
           </div>
         </form>
         <p className="text-center mt-4">
