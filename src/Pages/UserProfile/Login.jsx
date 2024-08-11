@@ -38,7 +38,7 @@ const Login = () => {
   const GoogleProvider = new GoogleAuthProvider();
   const handleGoogleSignIn = () => {
     console.log('google mama is coming');
-    signInWithPopup(auth,GoogleProvider)
+    signInWithPopup(auth,GoogleProvider)  // display google login popup
     .then(result => {
       const user = result.user;
       console.log(user);

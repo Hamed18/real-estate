@@ -65,15 +65,15 @@ const Navbar = () => {
           {user ? (
             <div className="flex mr-2">
               <div className="w-10 rounded-full">
-                <img alt="Tailwind CSS Navbar component" src={userdefaultPic} />
+                <img alt="Tailwind CSS Navbar component" src={user?.photoURL} className="rounded-full mr-1" />
               </div>
-              <button onClick={handleSignOut} className="btn">
+              <button onClick={handleSignOut} className="btn btn-primary">
                 Sign Out
               </button>
             </div>
           ) : (
             <Link to="/login">
-              <button className="btn">Login</button>
+              <button className="btn btn-primary">Login</button>
             </Link>
           )}
         </div>
