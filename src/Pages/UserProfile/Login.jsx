@@ -1,16 +1,25 @@
 import { AuthContext } from "../../Providers/AuthProviders";
 import Navbar from "../../Shared/Navbar";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useContext } from "react";
-import { getAuth, GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { useContext,useState } from "react";
+import {
+  getAuth,
+  GithubAuthProvider,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "firebase/auth";
 import app from "../../firebase/firebase.config";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
 
+  // toggle show password
+  const [showPassword, setShowPassword] = useState(false);
+
   // Auth redirect after login
   const location = useLocation();
-  console.log("location in the login page",location);
+  console.log("location in the login page", location);
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
@@ -27,46 +36,45 @@ const Login = () => {
     signIn(email, password) // calling signIn function from Authprovider.jsx
       .then((result) => {
         console.log(result.user);
-        navigate(location?.state ? location.state : '/');
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.error(error);
       });
-
   };
 
   // Google Sign In : https://firebase.google.com/docs/auth/web/google-signin
-  const auth = getAuth(app);   // remember to import app
+  const auth = getAuth(app); // remember to import app
   const GoogleProvider = new GoogleAuthProvider();
   const handleGoogleSignIn = () => {
-    console.log('google mama is coming');
-    signInWithPopup(auth,GoogleProvider)  // display google login popup
-    .then(result => {
-      const user = result.user;
-      console.log(user);
-      // auth redirect after sign up
-      navigate(location?.state ? location.state : '/');
-    })
-    .catch(error => {
-      console.log('error',error.message);
-    })
-  }
+    console.log("google mama is coming");
+    signInWithPopup(auth, GoogleProvider) // display google login popup
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        // auth redirect after sign up
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        console.log("error", error.message);
+      });
+  };
 
   // Github Sign In : https://firebase.google.com/docs/auth/web/github-auth
-  const GithubProvider = new GithubAuthProvider();  
+  const GithubProvider = new GithubAuthProvider();
   const handleGithubSignIn = () => {
-    signInWithPopup(auth,GithubProvider)
-    .then(result => {
-      const user = result.user;
-      console.log(user);
-      // auth redirect after sign up
-      navigate(location?.state ? location.state : '/');
-    })
-    .catch(error => {
-      const errorMessage = error.message;
-      console.log(errorMessage);
-    })  
-  }
+    signInWithPopup(auth, GithubProvider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        // auth redirect after sign up
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        console.log(errorMessage);
+      });
+  };
 
   return (
     <div>
@@ -90,13 +98,22 @@ const Login = () => {
             <label className="label">
               <span className="label-text">Password</span>
             </label>
-            <input
-              type="password"
-              name="password"
-              placeholder="password"
-              className="input input-bordered"
-              required
-            />
+            {/* toggle show password */}
+            <div className="relative">
+              <input
+                type={showPassword ? "text" : "password"}
+                name="password"
+                placeholder="password"
+                className="input input-bordered w-full"
+                required
+              />
+              <span
+                className="absolute top-4 right-3"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
+              </span>
+            </div>
             <label className="label">
               <a href="#" className="label-text-alt link link-hover">
                 Forgot password?
@@ -107,14 +124,24 @@ const Login = () => {
             <button className="btn btn-primary">Login</button>
           </div>
           {/* google & github sign in */}
-          <div className="flex justify-center m-2">  
-            <button className="btn btn-secondary m-2 item-center" onClick={handleGoogleSignIn}>Google Sign In</button>
-            <button className="btn btn-secondary m-2 item-center" onClick={handleGithubSignIn}>Github Sign In</button>
+          <div className="flex justify-center m-2">
+            <button
+              className="btn btn-secondary m-2 item-center"
+              onClick={handleGoogleSignIn}
+            >
+              Google Sign In
+            </button>
+            <button
+              className="btn btn-secondary m-2 item-center"
+              onClick={handleGithubSignIn}
+            >
+              Github Sign In
+            </button>
           </div>
         </form>
-        <p className="text-center mt-4">
+        <p className="text-center mt-2">
           Do not have an account?
-          <Link className="text-blue-600 font-bold" to="/register">
+          <Link className="text-blue-600 font-bold ml-1" to="/register">
             Register
           </Link>
         </p>
