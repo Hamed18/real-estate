@@ -7,6 +7,8 @@ import app from "../../firebase/firebase.config";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
+
+  // Auth redirect after login
   const location = useLocation();
   console.log("location in the login page",location);
   const navigate = useNavigate();
@@ -42,6 +44,8 @@ const Login = () => {
     .then(result => {
       const user = result.user;
       console.log(user);
+      // auth redirect after sign up
+      navigate(location?.state ? location.state : '/');
     })
     .catch(error => {
       console.log('error',error.message);
@@ -55,6 +59,8 @@ const Login = () => {
     .then(result => {
       const user = result.user;
       console.log(user);
+      // auth redirect after sign up
+      navigate(location?.state ? location.state : '/');
     })
     .catch(error => {
       const errorMessage = error.message;
