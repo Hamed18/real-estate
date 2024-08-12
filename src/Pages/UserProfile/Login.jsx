@@ -2,7 +2,7 @@ import { AuthContext } from "../../Providers/AuthProviders";
 import Navbar from "../../Shared/Navbar";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { getAuth, GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import app from "../../firebase/firebase.config";
 
 const Login = () => {
@@ -33,8 +33,8 @@ const Login = () => {
 
   };
 
-  // Google Sign In
-  const auth = getAuth(app);
+  // Google Sign In : https://firebase.google.com/docs/auth/web/google-signin
+  const auth = getAuth(app);   // remember to import app
   const GoogleProvider = new GoogleAuthProvider();
   const handleGoogleSignIn = () => {
     console.log('google mama is coming');
@@ -46,6 +46,20 @@ const Login = () => {
     .catch(error => {
       console.log('error',error.message);
     })
+  }
+
+  // Github Sign In : https://firebase.google.com/docs/auth/web/github-auth
+  const GithubProvider = new GithubAuthProvider();  
+  const handleGithubSignIn = () => {
+    signInWithPopup(auth,GithubProvider)
+    .then(result => {
+      const user = result.user;
+      console.log(user);
+    })
+    .catch(error => {
+      const errorMessage = error.message;
+      console.log(errorMessage);
+    })  
   }
 
   return (
@@ -86,9 +100,10 @@ const Login = () => {
           <div className="form-control mt-6">
             <button className="btn btn-primary">Login</button>
           </div>
-          {/* google sign in */}
-          <div>  
+          {/* google & github sign in */}
+          <div className="flex justify-center m-2">  
             <button className="btn btn-secondary m-2 item-center" onClick={handleGoogleSignIn}>Google Sign In</button>
+            <button className="btn btn-secondary m-2 item-center" onClick={handleGithubSignIn}>Github Sign In</button>
           </div>
         </form>
         <p className="text-center mt-4">
