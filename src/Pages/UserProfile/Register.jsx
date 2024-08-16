@@ -6,7 +6,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
-  const { createUser, signIn } = useContext(AuthContext);
+  const { createUser, signIn, Profile } = useContext(AuthContext);
 
   // Password Verification and Toggle Password
   const [registerError, setRegisterError] = useState("");
@@ -29,14 +29,11 @@ const Register = () => {
     // Verify Password
     setRegisterError(""); // reset variable registerError
     setSuccess("");
-    if (password.length < 6) {
+  /*  if (password.length < 6) {
       setRegisterError("Password should be atleast 6 characters or longer");
       return; // remember to return
-    } else if (!/[A-Z]/.test(password)) {
-    /*  else if (!/^(?=.*[a-z])(?=.*[A-Z])+$/.test(password)){
-    setRegisterError("Password should contain atleast an uppercase and a lowercase character");
-    return;
-  }  */
+    } 
+    else if (!/[A-Z]/.test(password)) {
       setRegisterError(
         "Password should contain atleast one uppercase character"
       );
@@ -46,7 +43,11 @@ const Register = () => {
         "Password should contain atleast one lowercase character"
       );
       return;
-    }
+    }  */
+
+    /*  else if (!/^(?=.*[a-z])(?=.*[A-Z])+$/.test(password)){
+    setRegisterError("Password should contain atleast an uppercase and a lowercase character");
+    return; }  */
 
     createUser(email, password)
       .then((result) => {
@@ -57,6 +58,10 @@ const Register = () => {
         console.error(error);
         setRegisterError(error.message);
       });
+
+    Profile(name,photo)
+    .then()
+    .catch()
   };
 
   return (
