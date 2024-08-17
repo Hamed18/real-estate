@@ -16,7 +16,8 @@ const AuthProviders = ({children}) => {
 	    setLoading(true);
 	}
 
-	const Profile = (name,photo) => {
+	const HandleUpdateProfile = (name,photo) => {
+		console.log("photo is", photo)
 		const auth = getAuth();
 		updateProfile(auth.currentUser, {
 			displayName : name,
@@ -56,7 +57,8 @@ const AuthProviders = ({children}) => {
 		loading,
 		createUser,
 		logOut,
-		signIn
+		signIn,
+		HandleUpdateProfile
 	}
 	return (
 		<AuthContext.Provider value={authInfo}>

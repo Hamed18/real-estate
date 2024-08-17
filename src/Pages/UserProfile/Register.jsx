@@ -6,7 +6,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
-  const { createUser, signIn, Profile } = useContext(AuthContext);
+  const { createUser, signIn, HandleUpdateProfile } = useContext(AuthContext);
 
   // Password Verification and Toggle Password
   const [registerError, setRegisterError] = useState("");
@@ -29,7 +29,7 @@ const Register = () => {
     // Verify Password
     setRegisterError(""); // reset variable registerError
     setSuccess("");
-  /*  if (password.length < 6) {
+    if (password.length < 6) {
       setRegisterError("Password should be atleast 6 characters or longer");
       return; // remember to return
     } 
@@ -43,7 +43,7 @@ const Register = () => {
         "Password should contain atleast one lowercase character"
       );
       return;
-    }  */
+    }  
 
     /*  else if (!/^(?=.*[a-z])(?=.*[A-Z])+$/.test(password)){
     setRegisterError("Password should contain atleast an uppercase and a lowercase character");
@@ -52,6 +52,7 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
+        HandleUpdateProfile(name,photo)
         setSuccess("User Created Successfully");
       })
       .catch((error) => {
@@ -59,9 +60,7 @@ const Register = () => {
         setRegisterError(error.message);
       });
 
-    Profile(name,photo)
-    .then()
-    .catch()
+    
   };
 
   return (
@@ -90,7 +89,7 @@ const Register = () => {
             </label>
             <input
               type="text"
-              name="Photo"
+              name="photo"
               placeholder="Photo URl"
               className="input input-bordered"
               required

@@ -4,7 +4,7 @@ import Navbar from "../../Shared/Navbar";
 import { updateProfile,getAuth } from "firebase/auth";
 
 const UpdateProfile = () => {
-	const {user, Profile} = useContext(AuthContext);
+	const {user, HandleUpdateProfile} = useContext(AuthContext);
 	//const {name,setName} = useState(user.name);
 	//const {photo,setPhoto} = useState(user.photo);
 	//const [user,setUser] = useState(user);
@@ -16,7 +16,7 @@ const UpdateProfile = () => {
 		 const photo = form.get("Photo");
 		 console.log(name,photo);
 
-		Profile(name,photo)
+		 HandleUpdateProfile(name,photo)
 	}
 
 	return (
