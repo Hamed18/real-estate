@@ -2,6 +2,8 @@ import { createContext, useEffect, useState } from "react";
 import app from "../firebase/firebase.config";
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { updateProfile } from "firebase/auth";
+import { toast, ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 export const AuthContext = createContext(null);
 
@@ -14,6 +16,7 @@ const AuthProviders = ({children}) => {
 	const createUser = (email,password,name,photo) => {
 	    return createUserWithEmailAndPassword(auth,email,password);    // https://firebase.google.com/docs/auth/web/start
 	    setLoading(true);
+		alert("Profile Created")
 	}
 
 	const HandleUpdateProfile = (name,photo) => {
@@ -25,6 +28,7 @@ const AuthProviders = ({children}) => {
 		})
 		.then( () => {
 			console.log("Profile Updated");
+			alert("Profile Updated")
 		})
 		.catch( (error) => {
 			console.log(error.message);
