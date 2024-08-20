@@ -18,7 +18,7 @@ const routes = createBrowserRouter([
 			loader: () => fetch('/estates.json')
 		},
 		{
-			path: "/estates/:id",  // dynamic route
+			path: "/estate/:id",  // dynamic route
 			element: <PrivateRoute><EstateDetails></EstateDetails></PrivateRoute>,
 			loader: () => fetch('estates.json')
 		},
