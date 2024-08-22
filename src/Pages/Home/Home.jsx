@@ -11,7 +11,7 @@ const Home = () => {
   console.log(estates);
 
   return (
-    <div className="text-center">
+    <div className="text-center m-2">
       <Navbar></Navbar>
       <Header></Header>
       <h2 className="mt-8 mb-4 text-3xl font-bold">About Us</h2>
@@ -22,17 +22,15 @@ const Home = () => {
       <h2 className="mt-8 mb-4 text-3xl font-bold">Explore</h2>
 
       {/* main section */}
-      <div className="md:grid md:grid-cols-4 gap-6">
-        <div className="md:col-span-1">
+      <div className="md:grid md:grid-cols-2 lg:grid-cols gap-6">
+      {/*  <div className="md:col-span-1">
           <LeftSideNavbar />
-        </div>
+        </div>  */}
 
         {/* Main container */}
-        <div className="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
           {estates.map((estate) => (
             <EstateCard key={estate.id} estate={estate} />
           ))}
-        </div>
 
         {/* Uncomment this if you need the right side navbar */}
         {/* <div>
